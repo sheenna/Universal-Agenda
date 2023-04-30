@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentController">
+    <TableView fx:id="appointmentTable" layoutX="180.0" layoutY="72.0" prefHeight="450.0" prefWidth="800.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="75.0">
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+        </columnResizePolicy>
+    </TableView>
+    <RadioButton fx:id="defaultViewRadioButton" layoutX="184.0" layoutY="27.0" mnemonicParsing="false" onAction="#clickedDefaultView" selected="true" text="Default View (ALL)" />
+    <RadioButton fx:id="monthViewRadioButton" layoutX="326.0" layoutY="27.0" mnemonicParsing="false" onAction="#clickedMonthView" text="Month View" />
+    <RadioButton fx:id="weekViewRadioButton" layoutX="437.0" layoutY="27.0" mnemonicParsing="false" onAction="#clickedWeekView" text="Week View" />
+    <ButtonBar prefHeight="571.0" prefWidth="800.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="550.0">
+        <buttons>
+            <Button fx:id="refreshButton" mnemonicParsing="false" onMouseClicked="#refreshView" text="Refresh" />
+            <Button fx:id="appointmentAddButton" mnemonicParsing="false" onMouseClicked="#addAppointment" text="Add" />
+            <Button fx:id="appointmentEditButton" layoutX="695.0" layoutY="23.0" mnemonicParsing="false" onMouseClicked="#editAppointment" text="Edit" />
+            <Button fx:id="appointmentDeleteButton" layoutX="610.0" layoutY="23.0" mnemonicParsing="false" onMouseClicked="#deleteAppointment" text="Delete" />
+        </buttons>
+    </ButtonBar>
+</AnchorPane>

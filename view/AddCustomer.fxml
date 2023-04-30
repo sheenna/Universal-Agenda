@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            fx:controller="controller.AddCustomerController">
+    <children>
+        <TextField fx:id="customerIDField" editable="false" layoutX="375.0" layoutY="65.0" opacity="0.7"
+                   prefHeight="25.0" prefWidth="82.0" promptText="Customer ID"
+                   style="-fx-background-color: #f4f4f4; -fx-border-color: #ccc;"/>
+        <TextField fx:id="customerNameField" layoutX="35.0" layoutY="80.0" prefHeight="25.0" prefWidth="252.0"
+                   promptText="Name"/>
+        <TextField fx:id="customerAddressField" layoutX="35.0" layoutY="135.0" prefHeight="25.0" prefWidth="315.0"
+                   promptText="Address"/>
+        <TextField fx:id="customerPostalCodeField" layoutX="35.0" layoutY="190.0" promptText="Postal Code"/>
+        <TextField fx:id="customerPhoneField" layoutX="35.0" layoutY="245.0" promptText="Phone Number"/>
+        <ComboBox fx:id="countryChooser" layoutX="230.0" layoutY="245.0" prefHeight="25.0" prefWidth="174.0"
+                  promptText="Country"/>
+        <Button fx:id="saveButton" layoutX="432.0" layoutY="348.0" mnemonicParsing="false"
+                onMouseClicked="#handleSaveButton" text="Save"/>
+        <Button fx:id="backButton" layoutX="350.0" layoutY="348.0" mnemonicParsing="false"
+                onMouseClicked="#handleBackButton" text="Back"/>
+        <Label fx:id="customerTitleLabel" layoutX="168.0" layoutY="17.0" text="Add a New Customer">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+        <ComboBox fx:id="divisionChooser" layoutX="35.0" layoutY="300.0" prefHeight="25.0" prefWidth="236.0"
+                  promptText="Division"/>
+        <Label layoutX="306.0" layoutY="304.0" prefHeight="17.0" prefWidth="68.0" text="Division ID: "/>
+        <Label fx:id="actualDivID" layoutX="377.0" layoutY="304.0" text="###"/>
+        <Label layoutX="35.0" layoutY="60.0" text="Name" AnchorPane.leftAnchor="35.0"/>
+        <Label layoutX="230.0" layoutY="225.0" text="Country"/>
+        <Label layoutX="35.0" layoutY="225.0" text="Phone Number" AnchorPane.leftAnchor="35.0"/>
+        <Label layoutX="35.0" layoutY="280.0" text="First Level Division" AnchorPane.leftAnchor="35.0"/>
+        <Label layoutX="35.0" layoutY="170.0" text="Postal Code" AnchorPane.leftAnchor="35.0"/>
+        <Label layoutX="35.0" layoutY="115.0" text="Address" AnchorPane.leftAnchor="35.0"/>
+        <Label layoutX="375.0" layoutY="45.0" text="Customer ID"/>
+    </children>
+</AnchorPane>
